@@ -1,3 +1,4 @@
+"use strict";
 // 1. Ко всем элементам, имеющим класс "dropdown-item" добавить еще один класс "super-dropdown", необходимо использовать методы forEach и querySelectorAll и свойство classList у элементов.
 const ddItems = document.querySelectorAll("div.dropdown > div.dropdown-menu > a.dropdown-item");
 ddItems.forEach(item => item.classList.add("super-dropdown"));
