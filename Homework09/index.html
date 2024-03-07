@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes heartbeat {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: center center;
+                transform-origin: center center;
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+
+            10% {
+                -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+
+            17% {
+                -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+
+            33% {
+                -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+            }
+
+            45% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+            }
+        }
+        @keyframes scale-out-left {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+        .animate_animated {
+            animation: heartbeat 1.5s ease-in-out infinite both;
+        }
+
+        .animate_fadeInLeftBig {
+            animation: scale-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+        }
+
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="from" type="text">
+    В инпуте написано: <span></span>
+
+    <br>
+
+    <button class="messageBtn">Показать блок</button>
+    <div class="message" style="visibility: hidden;">
+        Привет :)
+    </div>
+
+    <br>
+
+    <form>
+        <label>
+            Первый инпут:
+            <input class="form-control" type="text">
+        </label>
+        <br>
+        <br>
+        <label>
+            Второй инпут:
+            <select class="form-control">
+                <option value=""></option>
+                <option value="1">Один</option>
+                <option value="2">Два</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <button>Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
