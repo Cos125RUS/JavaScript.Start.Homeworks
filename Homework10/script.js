@@ -1,6 +1,11 @@
 const contentDiv = document.querySelector('div.content');
 contentDiv.classList.add('content');
 const data = JSON.parse(characters);
+const statusReplacer = {
+    'Alive': 'alive',
+    'Dead': 'dead',
+    'unknown': 'unknown'
+};
 data.results.forEach(element => {
     console.log(element);
     const divBox = document.createElement('div');
@@ -20,6 +25,7 @@ data.results.forEach(element => {
     divBox.appendChild(species);
     const status = document.createElement('p');
     status.textContent = 'Status: ' + element.status;
+    status.classList.add(statusReplacer[element.status]);
     divBox.appendChild(status);
     if (element.type != '') {
         const type = document.createElement('p');
