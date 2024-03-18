@@ -1,0 +1,47 @@
+.container{
+    text-align: center;
+}
+
+.ui {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 15px;
+    border: 2px solid #000;
+}
+
+.load-box {
+    display: flex;
+}
+
+.load-file-icon, .fas, .progress, .volume {
+    cursor: pointer;
+}
+
+.load-file {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.file-name {
+    width: 80px;
+}
+
+.video {
+    max-width: 95vw;
+}
+
+.progress-box {
+    /* min-width: 70vw; */
+    display: flex;
+    gap: 15px;
+    flex-grow: 2;
+}
+
+.progress {
+    flex-grow: 5;
+}
